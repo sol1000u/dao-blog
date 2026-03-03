@@ -1,18 +1,15 @@
-export const metadata = {
-  title: "BSC道教",
-  description: "BSC道教文化",
-};
+import type { Metadata } from "next"
+import './globals.css'   // ← 你新加的这一行
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export const metadata: Metadata = {
+  title: 'BSC道教',
+  // ...
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="zh">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
