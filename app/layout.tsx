@@ -1,54 +1,34 @@
-import "./globals.css";
-import Link from "next/link";
+import "./globals.css"
+import Link from "next/link"
 
 export const metadata = {
-  title: "BSC道教",
-  description: "探寻道教文化 · 修心养性 · 顺应自然",
-};
+  title: "DAO Web3",
+  description: "DAO Web3 Project",
+}
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh">
-      <body className="bg-stone-50 text-gray-900">
+    <html lang="en">
+      <body>
 
-        {/* 导航栏 */}
-        <nav className="w-full border-b bg-white/80 backdrop-blur-md fixed top-0 left-0 z-50">
-          <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+        <nav style={{
+          padding:"20px",
+          borderBottom:"1px solid #ccc",
+          display:"flex",
+          gap:"20px"
+        }}>
 
-            <Link href="/" className="text-xl font-bold">
-              BSC道教
-            </Link>
+          <Link href="/">Home</Link>
+          <Link href="/token">Token</Link>
+          <Link href="/community">Community</Link>
+          <Link href="/roadmap">Roadmap</Link>
+          <Link href="/posts/daodejing">DaoDeJing</Link>
 
-            <div className="flex gap-6 text-sm font-medium">
-
-              <Link href="/">首页</Link>
-
-              <Link href="/posts/daodejing">
-                道德经
-              </Link>
-
-              <Link href="/posts/daodejing">
-                修行
-              </Link>
-
-              <Link href="/posts/daodejing">
-                道教文化
-              </Link>
-
-            </div>
-          </div>
         </nav>
 
-        {/* 页面内容 */}
-        <main className="pt-24">
-          {children}
-        </main>
+        {children}
 
       </body>
     </html>
-  );
+  )
 }
