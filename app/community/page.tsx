@@ -15,6 +15,13 @@ export default function Community() {
           View HeYi Post
         </a>
       </p>
+     
+      <p>
+        <a href="https://t.me/daojiaobsc">
+          Join tg 
+        </a>
+      </p>
+
 
     </main>
   )
