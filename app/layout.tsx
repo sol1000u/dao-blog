@@ -2,8 +2,8 @@ import "./globals.css";
 import Link from "next/link";
 
 export const metadata = {
-  title: "道教 Web3",
-  description: "道教 Web3 -B S C",
+  title: "道教-B S C ",
+  description: "道教-B S C "
 };
 
 export default function RootLayout({ children }) {
@@ -13,12 +13,16 @@ export default function RootLayout({ children }) {
 
         <nav className="nav">
 
-          <Link href="/">DAO</Link>
-          <Link href="/token">Token</Link>
-          <Link href="/tokenomics">Tokenomics</Link>
-          <Link href="/roadmap">Roadmap</Link>
-          <Link href="/community">Community</Link>
-          <Link href="/about">About</Link>
+          <div className="logo">DAO</div>
+
+          <div className="menu">
+            <Link href="/">Home</Link>
+            <Link href="/token">Token</Link>
+            <Link href="/tokenomics">Tokenomics</Link>
+            <Link href="/roadmap">Roadmap</Link>
+            <Link href="/community">Community</Link>
+            <Link href="/about">About</Link>
+          </div>
 
         </nav>
 
